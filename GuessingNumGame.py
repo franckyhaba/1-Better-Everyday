@@ -27,3 +27,6 @@ while True:
         # If user types something that can't be turned into a number
         print("Invalid input. Please enter a number between 1 and 10.\n")
 
+# next i want you to improve it add a guess count, add if they guess 3 times they lose.
+# add if they would like to play again 
+# also add the game gets hard as you go if they win they get 2 extra lives but the numbers have to guess from goes from 1-10 to 1-20
