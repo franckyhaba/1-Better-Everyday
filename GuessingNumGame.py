@@ -4,7 +4,7 @@ import random  # import the random module
 secret_number = random.randint(1, 10)
 
 # Welcome message
-print("\nWelcome to Francky's Guessing Game!\n")
+print("\nWelcome to Francky Guessing Game!\n")
 
 # Start the guessing loop
 while True:
