@@ -3,7 +3,7 @@ def LogLvl ():
     while True :
         
         try:
-            Keyword = str(input("Enter log level: " )).upper
+            Keyword = str(input("Enter log level: " )).upper()
             print (Keyword)
         
         except ValueError: 
