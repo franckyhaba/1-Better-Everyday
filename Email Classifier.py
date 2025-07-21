@@ -6,12 +6,10 @@ def emailClassifier() :
             print(email)
             if  "@" not in email or ".com" not in email:
 
-             print(f'Your {email} is missing an "@".')
-             continue
-         
-            else:
-                
+                print(f'Your {email} is missing an "@".')
+                continue
             
+            else:
                 if email == 'someone@gmail.com': 
                     print(f'Your {email} has been sorted in the personal email sections.')
                     
@@ -20,8 +18,8 @@ def emailClassifier() :
                 
                 elif email == 'email1@company.com':
                     print(f'Your {email} has been sorted in the work email sections.')
-                        
                     
-                
-         
+                else:
+                    print(f'Your {email} does not match any known category.') 
+                break
 emailClassifier()
