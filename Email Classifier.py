@@ -10,7 +10,7 @@ def emailClassifier() :
                 continue
             
             else:
-                if email == 'someone@gmail.com': 
+                if email.endswith ('@gmail.com'): 
                     print(f'Your {email} has been sorted in the personal email sections.')
                     
                 elif email == 'junkuser@random.com':
