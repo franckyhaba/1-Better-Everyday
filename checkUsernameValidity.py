@@ -25,30 +25,31 @@ def checkUsernameValidity(userName):
     
     while True:
         longerSix = len(userName) >= 6 
-        hasLetter = any(char.isstring() for char in userName)
-        hasSpecial = any(char in string.punctuation and char.isdigit for char in userName)
+        hasFirstLetter = userName and userName[0].isalpha()
+        hasOnlyValidChars = all(char.isalnum() or char == '_' for char in userName)
         hasSpace = any(char .isspace() for char in userName)
         
-        if longerSix and hasLetter and hasSpecial and hasSpace:
-            print(f'{userName} has been been accepted')
+        if longerSix and hasFirstLetter and hasOnlyValidChars and not hasSpace:
+            print()
+            print(f'{userName} has been been accepted ✅')
             break 
         else:
             
             if not longerSix:
                 print (f'{userName }is not longer then 6 characters.')
              
-            if not hasLetter: 
+            if not hasFirstLetter: 
                 print (f'{userName } does not begin with a letter.')
             
-            if not hasSpecial: 
+            if not hasOnlyValidChars: 
                 print (f'{userName }has no special characters.')
             
             if not hasSpace: 
                 print (f'{userName } has a space please get rid of it.')
                 
-            print(msg)
+           
             print()
-            userName = input('Please follow the rules when picking a username')  
+            userName = input('Please follow the rules when picking a username: ')  
              
     
 checkUsernameValidity(userName)
