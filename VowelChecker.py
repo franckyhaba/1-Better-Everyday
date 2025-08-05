@@ -1,22 +1,28 @@
-msg = input(("Enter a word so we can find the vowel:  "))
 
+def checkVowel ():
+    
+    vowels= { 'a','e','i','o','u' }
+    
+    while True: 
+        msg = input(("Enter a word so we can find the vowel:  "))
+        found = False
 
-def checkVowel (msg):
-    
-    vowels= {
-            'a','e','i','o','u' 
-            }
-    
-    while True :
-        if msg == 'a,e,i,o,u':
+        for char in msg.lower(): # Check each letter
+         
+            if char in vowels: 
+                print(f"✅ You got a vowel: '{char}' is in '{msg}'")
+                found = True
+                break
+           
             
-            print ('You got a vowel in the {msg}')
-            break 
+        if found: 
+                
+               break
+        else:
+            print(f"❌ There is no vowel in the word '{msg}'") 
+            print ()
         
-        else :
-            print('The is no vowel in the word {msg}') 
-        continue
-checkVowel(msg)
+checkVowel()
             
             
             
