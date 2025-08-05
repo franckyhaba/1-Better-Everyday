@@ -17,7 +17,7 @@ Must only contain letters, numbers, or underscores.
 Must not contain any spaces.
 If the username doesn't meet the criteria, print what it’s missing.''')
 print(msg)
-print
+print()
 
 userName = input('Please input username: ')
 
@@ -47,7 +47,7 @@ def checkUsernameValidity(userName):
                 print (f'{userName } has a space please get rid of it.')
                 
             print(msg)
-            print 
+            print()
             userName = input('Please follow the rules when picking a username')  
              
     
