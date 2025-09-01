@@ -25,3 +25,6 @@ result = secondLargestNumber([0,5,20,8,15])
 print(result)
 
 
+nikeUrl = 'https://nike.com'
+pgUrl = nikeUrl.removeprefix('https://')
+print(pgUrl)
