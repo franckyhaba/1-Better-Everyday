@@ -1,9 +1,10 @@
-#oddNumbers =[]
+oddNumbers =[]
 
-#for values in range (1,21,1):
-   # oddNumber = values * 2
-    #oddNumbers.append(oddNumber)
-#print(oddNumbers)
+for values in range (3,31,3):
+    oddNumber = values
+    oddNumbers.append(oddNumber)
+print(oddNumbers)
+#print(values)
 
-oddNumbers= list(range(3,21,3))
-print (oddNumbers)
+#oddNumbers= list(range(3,21,3))
+#print (oddNumbers)
