@@ -14,7 +14,8 @@ print(likeToVist)
 
 
 likeToVist.sort()
-print(len(likeToVist))
+
 print(likeToVist)
+print(len(likeToVist))
 
 
