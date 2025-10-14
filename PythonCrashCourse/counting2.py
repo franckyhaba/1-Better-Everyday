@@ -31,7 +31,6 @@
 
 # print(sum(numbers))
 
-Numbers =[values ** 2 for values in range (1,11)] 
-print(Numbers)
-
+# Numbers =[values ** 2 for values in range (1,11)] 
+# print(Numbers)
 
