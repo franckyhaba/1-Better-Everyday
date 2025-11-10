@@ -7,3 +7,5 @@ transportExpense = []
 eventsExpense = []
 
 print("Please input your expense details: ")
+
+foodExpense.append(float(input('Money spend on food (£): ')))
