@@ -16,3 +16,8 @@ eventsExpenses.append(float(input('Money spend on events (£): ')))
 totalFood = sum(foodExpenses)
 totalTransport = sum(transportExpenses)
 totalEvents = sum(eventsExpenses)
+
+# print the calc
+
+print("\n==== Monthly Summary ====")
+print("f'food: £{totalFood}/{monthlyLimits[0]}")
