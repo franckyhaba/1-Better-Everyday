@@ -1,6 +1,6 @@
 msg = "Welcome to Franckys Vending Machine, select what you would like:"
 print(msg)
-print()  # This creates a blank line for better spacing
+print()  # This creates a blank line for better spacingeven
 
 balance = 5.00
 

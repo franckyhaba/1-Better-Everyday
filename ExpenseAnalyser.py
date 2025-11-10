@@ -1,6 +1,6 @@
 print("Welcome to your simple expense analyzer!\n")
 
-MonthlyLimits = (500,350,500,) #food, transport, events 
+monthlyLimits = (500,350,700,) #food, transport, events 
 
 foodExpenses = []
 transportExpenses = []
@@ -20,4 +20,18 @@ totalEvents = sum(eventsExpenses)
 # print the calc
 
 print("\n==== Monthly Summary ====")
-print("f'food: £{totalFood}/{monthlyLimits[0]}")
+print(f'Food: £{totalFood}/{monthlyLimits[0]}')
+print(f'Transport: £{totalTransport}/{monthlyLimits[1]}')
+print(f'Events: £{totalEvents}/{monthlyLimits[2]}')
+
+print ("\nBudget check: ")
+
+for category, total, limit in zip(
+        ["Food", "Transport", "Events"],
+        [totalFood,totalTransport,totalEvents],
+        monthlyLimits 
+):
+    if total > limit:
+        print(f"Over budget on {category}! ")
+    else:
+         print(f"your spending is under control {category}! ")
