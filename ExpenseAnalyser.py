@@ -7,7 +7,12 @@ transportExpenses = []
 eventsExpenses = []
 
 print("Please input your expense details: ")
-
 foodExpenses.append(float(input('Money spend on food (£): ')))
 transportExpenses.append(float(input('Money spend on transport (£): ')))
 eventsExpenses.append(float(input('Money spend on events (£): ')))
+
+# calc totals 
+
+totalFood = sum(foodExpenses)
+totalTransport = sum(transportExpenses)
+totalEvents = sum(eventsExpenses)
