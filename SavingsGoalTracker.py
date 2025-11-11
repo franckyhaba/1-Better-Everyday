@@ -9,16 +9,19 @@ savingTotals = (
     ,1000 #device
     ) #emergency fund, mutual, travel fund, device fund
 
-emergencySaving= [0]
-mutualSaving= [1]
-travelSaving =  [2]
-deviceSaving= [3]
+emergencySaving= []
+mutualSaving= []
+travelSaving =  []
+deviceSaving= []
 
 print = ("Please enter the saving for the month: ")
-emergencySaving.append = float(input("Emergency savings for this month(£):  "))
-mutualSaving.append = float(input("Mutual savings for this month(£):  "))
-travelSaving.append = float(input("Travel savings for this month(£):  "))
-deviceSaving.append = float(input("Device savings for this month(£):  "))
+emergencySaving.append (float(input("Emergency savings for this month(£):  ")))
+mutualSaving.append (float(input("Mutual savings for this month(£):  ")))
+travelSaving.append (float(input("Travel savings for this month(£):  ")))
+deviceSaving.append (float(input("Device savings for this month(£):  ")))
+
+
+
 
 
 
