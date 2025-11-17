@@ -1,4 +1,4 @@
-print  ('\n=== Welcome to the saving goal tracker! ===\n')
+print('\n=== Welcome to the saving goal tracker! ===\n')
 
 
 savingTotals = {
