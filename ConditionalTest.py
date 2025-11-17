@@ -3,11 +3,11 @@
 
 Users =  ["francky", "mathew", "raoul", "sean", "jessica", "paddy", "marcie"]
 
-user = "Axcent"
+newUser = input("\n Please enter user name: ")
 
-if  user not in Users:
-        Msg = f"\n{user} is not a user, i predict it will be false"
+if  newUser not in Users:
+        Msg = f"\n{newUser} is not a user, i predict it will be false"
         print(Msg) 
 
-elif user in Users:  
-        print(f"\n {user} is one of our users.")
+elif newUser in Users:  
+        print(f"\n {newUser} is one of our users.")
