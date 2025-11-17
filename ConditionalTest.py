@@ -3,11 +3,20 @@
 
 Users =  ["francky", "mathew", "raoul", "sean", "jessica", "paddy", "marcie"]
 
-newUser = input("\n Please enter user name: ")
+while True :
+    newUser = input("\n Please enter user name: ")
+    
+    if  newUser not in Users:
+        print(f"\n{newUser} is not a user, user name has been accepted. ")
+        Users.append(newUser)
+        print(Users)
+        break
+        print(Users)
+    else:
+        newUser in Users
+        print(f"\n{newUser} user name is taken try again. ")
+        
 
-if  newUser not in Users:
-        Msg = f"\n{newUser} is not a user, i predict it will be false"
-        print(Msg) 
-
-elif newUser in Users:  
-        print(f"\n {newUser} is one of our users.")
+# else :
+#     newUser in Users  
+#     print(f"\n {newUser} is one of our users.")
