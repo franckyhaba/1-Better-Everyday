@@ -6,8 +6,8 @@ for ticker in tickers:
     
     if addTicker not in tickers: 
         print ("This tickers is already in the portfolio try again! ")
-    else:
-        addTicker in tickers
+        
+    elif addTicker in tickers:
         print ("The ticker has been added to the portfolio! ")
         print(tickers)
         break 
