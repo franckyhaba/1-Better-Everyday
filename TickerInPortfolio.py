@@ -2,11 +2,12 @@
 tickers = ["MC fp", "RI fp","BNP fp", "OR fp", "CA fp", "RNO fp"]
 
 for ticker in tickers:
-    addTicker = (input("Enter the ticker you want to the portfolio: "))
-    addTicker == tickers 
-    print ("This tickers is already in the portfolio try again! ")
-
-    if  addTicker != tickers:
+    addTicker = (input("\n Enter the ticker you want to the portfolio: "))
+    
+    if addTicker not in tickers: 
+        print ("This tickers is already in the portfolio try again! ")
+    else:
+        addTicker in tickers
         print ("The ticker has been added to the portfolio! ")
         print(tickers)
         break 
