@@ -14,5 +14,11 @@ for monthlyExpense in monthlyExpenses :
 
     if chooseCat in monthlyExpenses: 
     
-     msg = input(f"\n The category you have selected is {chooseCat}, PLease enter the amount spent this month:  ")
+     msg = input(f"\n The category you have selected is {chooseCat}, Please enter the amount spent this month:  ")
      print (msg)
+     if msg <= chooseCat: 
+         print("Your expenses fit with in the budget")
+    
+    elif msg > chooseCat:
+        print("You have went over the Budget!!!")
+        
