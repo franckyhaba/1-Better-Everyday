@@ -16,9 +16,10 @@ for name, expense in monthlyExpenses.items():
     
      msg = float(input(f"\n The category you have selected is {chooseCat}, Please enter the amount spent this month:  "))
      print (msg)
-     if msg <= sum(monthlyExpenses): 
-         print("Your expenses fit with in the budget")
+     if msg <= monthlyExpenses[chooseCat]: 
+         print(f"\n Your {chooseCat} expenses of £{msg} fit with in the budget")
+         print ("\n Thanks your expense has been stored!!")
          break
-     elif msg > chooseCat:
-        print("You have went over the Budget!!!")
+     elif msg > monthlyExpenses[chooseCat]:
+         print(f"\n Your {chooseCat} expenses of £{msg} doesn't fit in the budget, try again!")
         
