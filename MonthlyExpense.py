@@ -4,8 +4,10 @@ monthlyExpenses = {
                   'Transport': 120,
                   'Fun': 80
                   }
-monthlyExpenses.lower
+
 instructions= ('category available "Rent", "Food", "Transport", "Entertainment"')
 print(instructions)
 
-chooseCat = input('\n Please choose from the category available "Rent", "Food", "Transport", "Entertainment": ')    
+chooseCat = input('\n Please choose from the category available "Rent", "Food", "Transport", "Entertainment": ')
+chooseCat.title()
+    
