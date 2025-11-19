@@ -1,0 +1,1 @@
+restrictedItems = ["TobaccoCorp", "CoalEnergy", "WeaponsLtd"]
