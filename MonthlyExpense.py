@@ -8,17 +8,17 @@ monthlyExpenses = {
 instructions= ('category available "Rent", "Food", "Transport", "Entertainment"')
 print(instructions)
 
-for monthlyExpense in monthlyExpenses :
-    chooseCat = input('\n Please choose from the category available "Rent", "Food", "Transport", "Entertainment": ')
-    chooseCat.title()
+for name, expense in monthlyExpenses.items():
+    chooseCat= input('\n Please choose from the category available "Rent", "Food", "Transport", "Entertainment": ')
+    chooseCat= chooseCat.title()
 
     if chooseCat in monthlyExpenses: 
     
-     msg = input(f"\n The category you have selected is {chooseCat}, Please enter the amount spent this month:  ")
+     msg = float(input(f"\n The category you have selected is {chooseCat}, Please enter the amount spent this month:  "))
      print (msg)
-     if msg <= chooseCat: 
+     if msg <= sum(monthlyExpenses): 
          print("Your expenses fit with in the budget")
-    
-    elif msg > chooseCat:
+         break
+     elif msg > chooseCat:
         print("You have went over the Budget!!!")
         
