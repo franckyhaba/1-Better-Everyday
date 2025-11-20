@@ -20,12 +20,18 @@ for company in restrictedItems:
     # different offer within the acceptable range.
     if msg3 > 10000:
         print(f"\nYour offer of £{msg3} has been flagged — try again.")
-        print (msg3)
+         
+        msg3 = float(input(f"\n Please enter offer: "))
+        print(msg3)
         continue
 
     # Case 4: Offer is acceptable → break loop
         print(f"\nOffer of £{msg3} for {msg} has been accepted!")
         break
+    
+    
+    
+    
     
     # elif msg3 > 10001 : 
     #     print(f"Your offer of {msg3}, has been flagged try again ")
