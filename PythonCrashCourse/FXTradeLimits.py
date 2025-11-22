@@ -30,8 +30,16 @@ for name in currency :
 while True :
     
     trade = float(input("\n Enter FX trade size you want to make in £: "))
-    
-    if trade > 5000001:
+     
+    maxT  = 5000001
+    lowT = 0
+     
+    if trade > maxT:
         print(f"\n The max trade is 5,000,000 your trade of {trade} has surpassed the max try again!! ")
         
-    
+    elif trade <= maxT:
+        print(f"\n The trade amount of {trade} has been accepted!!")
+        
+    else:
+        trade <= lowT
+        print(f"The trade amount of {trade} is too low and can't be accepted try again!!")
