@@ -14,7 +14,7 @@ for name in currency :
     print(currencyTrade)
     
     if currencyTrade in currency:
-        print(f"The currency {currencyTrade} select can be traded!")
+        print(f"\n The currency {currencyTrade} select can be traded!")
         break
     else:
         currencyTrade not in currency
