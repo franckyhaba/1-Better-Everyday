@@ -1,9 +1,9 @@
-intro= " ==== Welcome to the FX trading platform, all trades are made ! ===== "
+intro= " \n ==== Welcome to the FX trading platform, all trades are made ! ===== "
 
 currency = {
-    "Swedish Krone": .08,
-    "Euro": .89,
-    "Dollars": .76
+    "Swedish Krone": 12.51,
+    "Euro": 1.14,
+    "Dollars": 1.31
 }
 
 
@@ -44,10 +44,13 @@ while True :
     
     else: 
         print(f"\n The trade amount of {trade} has been accepted!!")
+        print()
         break 
     
-calcFX = trade * currency.items()
+exRate = currency[currencyTrade]  
+calcFX = trade * exRate
 
-print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' too {currencyTrade} {calcFX}.")
-    
+print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' to {currencyTrade} {calcFX}.")
+
+print ()
     
