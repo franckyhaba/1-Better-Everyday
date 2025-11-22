@@ -1,9 +1,9 @@
 intro= " ==== Welcome to the FX trading platform, all trades are made ! ===== "
 
 currency = {
-    "Swedish Krone",
-    "Euro",
-    "Dollars"
+    "Swedish Krone": .08,
+    "Euro": .89,
+    "Dollars": .76
 }
 
 
@@ -28,6 +28,10 @@ for name in currency :
 # print(currencyTrade)
 
 while True :
+    
     trade = float(input("\n Enter FX trade size you want to make in £: "))
     
+    if trade > 5000001:
+        print(f"\n The max trade is 5,000,000 your trade of {trade} has surpassed the max try again!! ")
+        
     
