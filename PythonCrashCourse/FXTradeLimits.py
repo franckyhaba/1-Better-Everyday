@@ -11,14 +11,16 @@ print(intro)
 for name in currency :
     
     currencyTrade = input("\n Please select the currency you want to trade your pounds to:  ")
-    print(currencyTrade)
+    
+    currencyTrade = currencyTrade.title()
     
     if currencyTrade in currency:
-        print(f"\n The currency {currencyTrade} select can be traded!")
+        currencyTrade.title()
+        print(f"\n The currency '{currencyTrade}' select can be traded!")
         break
     else:
         currencyTrade not in currency
-        print(f"The currency {currencyTrade} can't be traded try again! ")
+        print(f"\nThe currency '{currencyTrade}' can't be traded try again! ")
         continue 
         
     
@@ -26,6 +28,6 @@ for name in currency :
 # print(currencyTrade)
 
 while True :
-    trade = float(input("\n Enter FX trade size you want to make in £ "))
+    trade = float(input("\n Enter FX trade size you want to make in £: "))
     
     
