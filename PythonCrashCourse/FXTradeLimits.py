@@ -8,9 +8,9 @@ currency = {
 
 
 print(intro)
-for currencys in currency.item(): 
+for name in currency :
     
-    currencyTrade = "\n Please select the currency you want to trade your pounds to:  "
+    currencyTrade = input("\n Please select the currency you want to trade your pounds to:  ")
     print(currencyTrade)
     
     if currencyTrade in currency:
