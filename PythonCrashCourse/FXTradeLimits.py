@@ -1,15 +1,31 @@
-Intro= "==== Welcome to the trading platform! ===== "
+intro= " ==== Welcome to the FX trading platform, all trades are made ! ===== "
 
-Currency = {
-    "Pound",
+currency = {
+    "Swedish Krone",
     "Euro",
     "Dollars"
 }
 
 
-print(Intro)
-currencyTrade = "\n Please select the currency you want to trade in:  "
-print(currencyTrade)
+print(intro)
+for currencys in currency.item(): 
+    
+    currencyTrade = "\n Please select the currency you want to trade your pounds to:  "
+    print(currencyTrade)
+    
+    if currencyTrade in currency:
+        print(f"The currency {currencyTrade} select can be traded!")
+        break
+    else:
+        currencyTrade not in currency
+        print(f"The currency {currencyTrade} can't be traded try again! ")
+        continue 
+        
+    
+# currencyTrade = "\n Please select the currency you want to trade your pounds to:  "
+# print(currencyTrade)
 
 while True :
     trade = float(input("\n Enter FX trade size you want to make in £ "))
+    
+    
