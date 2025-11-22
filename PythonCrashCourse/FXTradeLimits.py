@@ -39,9 +39,15 @@ while True :
         continue
         
     elif  trade < lowT:
-        print(f"\nThe trade amount of {trade} is too low and can't be accepted try again!!")
+        print(f"\n The trade amount of {trade} is too low and can't be accepted try again!!")
         continue
     
     else: 
         print(f"\n The trade amount of {trade} has been accepted!!")
-        break
+        break 
+    
+calcFX = trade * currency.items()
+
+print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' too {currencyTrade} {calcFX}.")
+    
+    
