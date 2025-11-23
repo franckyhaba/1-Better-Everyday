@@ -47,21 +47,21 @@ while True :
         print()
         break 
     
-exRate = currency[currencyTrade]  
-calcFX = trade * exRate
+    exRate = currency[currencyTrade]  
+    calcFX = trade * exRate
 
-print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' to {currencyTrade} {calcFX}.")
+    print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' to {currencyTrade} {calcFX}.")
 
-msg = input("\n Do you want make another trade? 'YES/NO': ")
-msg = msg.title()
-print (msg)
+    msg = input("\n Do you want make another trade? 'YES/NO': ")
+    msg = msg.title()
 
-if msg == 'Yes':
-    print (trade)
-     #continue
 
-elif msg  == "No":
-    print ('==== thanks for the trade you made have a good day!  ====')
+    if msg == 'Yes':
+        continue
+
+    elif msg  == "No":
+        print ('==== thanks for the trade you made have a good day!  ====')
+        break 
 
 
     
