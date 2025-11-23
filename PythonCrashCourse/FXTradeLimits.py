@@ -53,9 +53,17 @@ calcFX = trade * exRate
 print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' to {currencyTrade} {calcFX}.")
 
 msg = input("Do you want make another trade? 'YES/NO': ")
-msg = msg.title
+msg = msg.title()
 print (msg)
 
-if msg == 'YES':
+if msg == 'Yes':
+    print (currencyTrade)
+    continue
+
+elif msg  == "No":
+    print ('==== thanks for the trade you made have a good day!  ====')
+
+
+    
     
 
