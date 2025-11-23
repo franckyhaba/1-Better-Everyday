@@ -30,10 +30,10 @@ for name in currency :
 while True :
     
     trade = float(input("\n Enter FX trade size you want to make in £: "))
-     
+
     maxT  = 5000001
     lowT = 1
-     
+
     if trade > maxT:
         print(f"\n The max trade is 5,000,000 your trade of {trade} has surpassed the max try again!! ")
         continue
@@ -52,5 +52,10 @@ calcFX = trade * exRate
 
 print(f"\n The Currency change was {currencyTrade}, and you changed '£{trade}' to {currencyTrade} {calcFX}.")
 
-print ()
+msg = input("Do you want make another trade? 'YES/NO': ")
+msg = msg.title
+print (msg)
+
+if msg == 'YES':
     
+
