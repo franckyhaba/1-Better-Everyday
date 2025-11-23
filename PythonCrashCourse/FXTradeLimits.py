@@ -45,7 +45,7 @@ while True :
     else: 
         print(f"\n The trade amount of {trade} has been accepted!!")
         print()
-        break 
+        
     
     exRate = currency[currencyTrade]  
     calcFX = trade * exRate
