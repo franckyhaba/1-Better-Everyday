@@ -18,3 +18,7 @@ jobOpenings['taxi man ']=  "500 "
 print(jobOpenings)
 
 #if there are no key value pair in the dictionaries you can the .get()
+
+#will look something like this, 
+# postMan = jobOpenings.get(job, not available) 
+#print(postMan)
