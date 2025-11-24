@@ -16,3 +16,5 @@ print (jobOpenings)
 # if job is already stored you can just do this
 jobOpenings['taxi man ']=  "500 "
 print(jobOpenings)
+
+#if there are no key value pair in the dictionaries you can the .get()
