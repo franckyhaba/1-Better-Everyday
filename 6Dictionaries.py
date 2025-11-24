@@ -4,7 +4,11 @@ jobOpenings = {
         "Delivery Driver": 90,
         "Accountant": 5,
         "Law": 2,
-        "black man": 100 
+        "taxi man": 100 
 }
 print (jobOpenings)
-del jobOpenings ["black man "]
+del jobOpenings ["taxi man"]
+print (jobOpenings)
+
+jobOpenings['taxi man '] = '200' 
+print (jobOpenings)
