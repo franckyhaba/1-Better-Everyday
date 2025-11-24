@@ -11,4 +11,8 @@ del jobOpenings ["taxi man"]
 print (jobOpenings)
 
 jobOpenings['taxi man '] = '200' 
-print (jobOpenings)
+print (jobOpenings) 
+
+# if job is already stored you can just do this
+jobOpenings['taxi man ']=  "500 "
+print(jobOpenings)
