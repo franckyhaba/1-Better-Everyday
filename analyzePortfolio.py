@@ -1,0 +1,1 @@
+intro = "==== Welcome to the portfolio analyse ===="
