@@ -10,8 +10,8 @@ performance = {
                "best": ('Crypto', 15),
                "worst": ('Tech fund', -4.1),
                "AvergReturn": ('Real estate', 7),
-               "aboveAverg": ('Crypto', 15),
-               "belowAverg": ('ETF Euro', 4.5),
+               "aboveAverg": ['Crypto', "US index"],
+               "belowAverg": ['ETF Euro','tech fund' ]
                
                
 }
