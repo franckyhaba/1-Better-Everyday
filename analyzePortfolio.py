@@ -1,11 +1,20 @@
-intro = "==== Welcome to the portfolio analyse ===="
+intro = """
+=== Welcome to the portfolio analyse ===
+\nThis app is to track portfolio information.
+It helps you monitor investments!
 
-intro2 = """
-This app is to track portfolio information.
-It helps you monitor investments.
-Welcome to the Portfolio Tracker!
+\nselect the following number based on what information 
+you want to see 
+\n
+1. Investment in portfolio 
+2. Portfolio return in '%'
+3. Portfolio Performance 
+4. Add new Investment
+
 """
 print (intro)
+
+stage1 = input("")
 
 
 investments = ["ETF EURO", "Tech fund", "US index", "Real estate","Crypto"]
