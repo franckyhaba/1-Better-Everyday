@@ -1,4 +1,10 @@
 intro = "==== Welcome to the portfolio analyse ===="
+
+intro2 = """
+This app is to track portfolio information.
+It helps you monitor investments.
+Welcome to the Portfolio Tracker!
+"""
 print (intro)
 
 
@@ -15,7 +21,8 @@ performance = {
                
                
 }
-               
+
+msg = input("/n ")
     
     
     
