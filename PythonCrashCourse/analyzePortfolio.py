@@ -88,10 +88,15 @@ while True :
             print(f"  {asset}\n")
     
     elif stage1 == 4:
-        newInvestment = (input(f"\nAdd new investment: ")).tittle()
+        newInvestment = (input(f"\nAdd new investment: "))
+        newInvestment = newInvestment.title()
         investments.append(newInvestment) 
         print(f"\nNew investment '{newInvestment}' was added to the investments list. ")
-        print(f"\n{investments}\n")
+        print("\nPortfolio investment Summary: ")
+        print("-" * 30)
+        
+        for investment in investments:
+            print(f"- {investment}\n")
         
     
     
