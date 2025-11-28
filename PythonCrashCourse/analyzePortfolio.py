@@ -69,7 +69,19 @@ while True :
         print(f"\nHere is the portfolio return and investments: \n{returns}")
     
     elif stage1 == 3:
-        print(f"\nHere is the portfolio performance: {performance}")
+        print("Portfolio Performance Summary")
+        print("-" * 35)
+        print(f"Best Performer: {performance['best'][0]} with {performance['best'][1]}% return")
+        print(f"Worst Performer: {performance['worst'][0]} with {performance['worst'][1]}% return")
+        print(f"Average Return: {performance['avergReturn'][0]} at {performance['avergReturn'][1]}%\n")
+
+        print("Assets Above Average Return:")
+        for asset in performance['aboveAverg']:
+            print(f"   {asset}")
+
+        print("\nAssets Below Average Return:")
+        for asset in performance['belowAverg']:
+            print(f"  {asset}\n")
     
     elif stage1 == 4:
         newInvestment = (input(f"\nAdd new investment: ")).tittle()
