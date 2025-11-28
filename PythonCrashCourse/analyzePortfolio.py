@@ -38,6 +38,18 @@ performance = {
 
 while True : 
     
+    menu = {
+        1: 'Investment in portfolio',
+        2: "Portfolio return in '%'",
+        3: 'Portfolio Performance', 
+        4: 'Add new Investment',
+        5: 'Exit'
+}
+      
+        
+        
+        
+    }
     introList = {
         1: "Investment in portfolio",
         2: "Portfolio return in '%'",
