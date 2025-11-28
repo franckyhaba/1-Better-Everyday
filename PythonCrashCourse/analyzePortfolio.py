@@ -3,15 +3,8 @@ intro = """
 \nThis app is to track portfolio information.
 It helps you monitor investments!
 
-\nselect the following number based on what information 
+\nSelect the following number based on what information 
 you want to see 
-\n
-1. Investment in portfolio 
-2. Portfolio return in '%'
-3. Portfolio Performance 
-4. Add new Investment
-5. Exit
-
 """
 print (intro)
 
@@ -33,50 +26,56 @@ performance = {
     "aboveAverg": ['Crypto', "US index"],
     "belowAverg": ['ETF Euro','tech fund' ]
 }
-
+menu = {
+            1: 'Investment in portfolio',
+            2: "Portfolio return in '%'",
+            3: 'Portfolio Performance', 
+            4: 'Add new Investment',
+            5: 'Exit'
+} 
 
 
 while True : 
+    #show menu 
+    for number, value in menu.items():
+        print(f"{number}. {value}")
+        
+    stage1 = int(input("\n Please select a number from the list 1-5: "))
     
-    menu = {
-        1: 'Investment in portfolio',
-        2: "Portfolio return in '%'",
-        3: 'Portfolio Performance', 
-        4: 'Add new Investment',
-        5: 'Exit'
-}
-      
-        
-        
-        
-    }
-    introList = {
-        1: "Investment in portfolio",
-        2: "Portfolio return in '%'",
-        3: "Portfolio Performance", 
-        4: "Add new Investment",
-        5: "Exit"
-}
+    #invalid options
+    if stage1 not in menu:
+        print(f"\n{stage1} is not in the list try again!!! ")
+        continue 
     
-    stage1 = int(input("\n Please select a number from the list 1-4: "))
-    
-    
-    if stage1 not in introList:
-        print(f"\n {stage1} is not in the list try again!!! ")
-        
-        
+    print(f"\nYou selected: {menu[stage1]}\n")
     
         
-    
-    elif stage1 :
-        stage1 == 1
-        print('\n Investment in portfolio was selected' )
-        print(f'\nThe investment in your portfolio are {investments}')
+    if stage1 == 5:
         
-    elif stage1 :
-        stage1 == 2
-        print('\n Portfolio return was selected' )
-        print(f'\nThe investment in your portfolio are {investments}')
+        print("Exiting program... ")
+        break 
+    
+    if stage1 == 1:
+        print(f"\n Here are the current investment in your portfolio: {investments} \n")
+        
+    elif stage1 == 2:
+        print(f"\nRunning portfolio return: {menu[stage1]}")
+    
+    elif stage1 == 3:
+        print(f"\nRunning portfolio performance: {menu[stage1]}")
+    
+    elif stage1 == 4:
+        print(f"\nAdd new investment: {menu[stage1]}")
+    
+    # elif stage1 :
+    #     stage1 == 1
+    #     print('\n Investment in portfolio was selected' )
+    #     print(f'\nThe investment in your portfolio are {investments}')
+        
+    # elif stage1 :
+    #     stage1 == 2
+    #     print('\n Portfolio return was selected' )
+    #     print(f'\nThe investment in your portfolio are {investments}')
     
     
 
