@@ -94,16 +94,6 @@ while True :
         print(f"\n{investments}\n")
         
     
-    # elif stage1 :
-    #     stage1 == 1
-    #     print('\n Investment in portfolio was selected' )
-    #     print(f'\nThe investment in your portfolio are {investments}')
-        
-    # elif stage1 :
-    #     stage1 == 2
-    #     print('\n Portfolio return was selected' )
-    #     print(f'\nThe investment in your portfolio are {investments}')
-    
     
 
 
