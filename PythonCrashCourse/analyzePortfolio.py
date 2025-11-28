@@ -16,7 +16,14 @@ investments = [
     "Crypto"
     ]
 
-returns = ["4.5%","-4.1%", "-1.33%", "7%","15%"]
+returns = {
+    
+    "ETF EURO": 4.5,
+    "Tech fund": -4.1, 
+    "US index": -1.33, 
+    "Real estate": 7,
+    "Crypto": 15
+}
 
 performance = { 
 
@@ -56,16 +63,20 @@ while True :
         break 
     
     if stage1 == 1:
-        print(f"\n Here are the current investment in your portfolio: {investments} \n")
+        print(f"\nHere are the current investment in your portfolio: {investments} \n")
         
     elif stage1 == 2:
-        print(f"\nRunning portfolio return: {menu[stage1]}")
+        print(f"\nHere is the portfolio return and investments: \n{returns}")
     
     elif stage1 == 3:
-        print(f"\nRunning portfolio performance: {menu[stage1]}")
+        print(f"\nHere is the portfolio performance: {performance}")
     
     elif stage1 == 4:
-        print(f"\nAdd new investment: {menu[stage1]}")
+        newInvestment = (input(f"\nAdd new investment: ")).tittle()
+        investments.append(newInvestment) 
+        print(f"\nNew investment '{newInvestment}' was added to the investments list. ")
+        print(f"\n{investments}\n")
+        
     
     # elif stage1 :
     #     stage1 == 1
