@@ -66,7 +66,11 @@ while True :
         print(f"\nHere are the current investment in your portfolio: {investments} \n")
         
     elif stage1 == 2:
-        print(f"\nHere is the portfolio return and investments: \n{returns}")
+        print("Portfolio Return Summary")
+        print("-" * 35)
+        for asset, value in returns.items():
+            print(f"{asset}:{value}%\n")
+        #print(f"\nHere is the portfolio return and investments: \n{returns}")
     
     elif stage1 == 3:
         print("Portfolio Performance Summary")
