@@ -40,7 +40,13 @@
 # greetUser()
 #
 #
-#
+# passing information through a function 
+# 
+
+# def greetUser (username)
+#  ''' display simple greeting '''
+#   print(f'hello, {username.title()}!')
+# greetUser('jesse)
 #
 #
 #
