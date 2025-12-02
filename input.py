@@ -30,10 +30,14 @@
 #
 
 
+# === FUNCTION ===
+# 
 #
+# def greetUser(): 
+# ''' display a simple greeting '''
+#   print('hello')
 #
-#
-#
+# greetUser()
 #
 #
 #
