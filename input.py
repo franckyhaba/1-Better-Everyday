@@ -21,3 +21,27 @@
 #   print(x)
 #   x += 1
 #
+
+
+# removes from the list 
+# while 'cat' in pets:
+#       pets.remove('cat')
+#   print(pets)
+#
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

@@ -12,4 +12,5 @@ for ticker in tickers:
         tickers.append(addTicker)
         print(tickers)
         break 
-            
+            #
+            #

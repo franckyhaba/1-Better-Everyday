@@ -47,7 +47,7 @@ while True :
     for number, value in menu.items():
         print(f"{number}. {value}")
         
-    stage1 = int(input("\n Please select a number from the list 1-5: "))
+    stage1 =int(input("\n Please select a number from the list 1-5: "))
     
     #invalid options
     if stage1 not in menu:
