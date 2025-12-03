@@ -16,23 +16,16 @@ serversName = {
     'Aws': 'Down',
     'Hubspot': 'Down',
     'Meta': 'up',
-    'Microsoft': 'up:'
+    'Microsoft': 'up'   # <- removed the extra colon
 }
 
 healthCheck = []
 
 while True:
-    questions = input("\nPlease enter the server you want to check?: ")
-    questions = questions.title()
-    
+    questions = input("\nPlease enter the server you want to check?: ").strip().title()
+        
     if questions in serversName:
         print(f"\nFound server {questions} in list")
         break
-    else:
+    else:  # <- 'elif questions not in serversName:' is redundant
         print(f"Server {questions} cannot be found, please try again")
-
-
-    
-    
-    
-        
