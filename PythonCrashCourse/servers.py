@@ -11,12 +11,26 @@
 
 
 
-
 serversName = {
     
-    'art':  'up', 
+    'Art':  'up', 
     'Aws': 'Down',
     'Hubspot': 'Down',
     'Meta': 'up',
     'MicroSoft': 'up:'
 }
+
+
+
+healthCheck = []
+
+while True :
+    
+    questions = str(input("Please enter the server you want to check?: "))
+    questions == questions.title()
+    
+    for server, health in serversName:
+        
+        serversName == 'up'
+        
+        
