@@ -12,25 +12,27 @@
 
 
 serversName = {
-    
     'Art':  'up', 
     'Aws': 'Down',
     'Hubspot': 'Down',
     'Meta': 'up',
-    'MicroSoft': 'up:'
+    'Microsoft': 'up:'
 }
-
-
 
 healthCheck = []
 
-while True :
+while True:
+    questions = input("\nPlease enter the server you want to check?: ")
+    questions = questions.title()
     
-    questions = str(input("Please enter the server you want to check?: "))
-    questions == questions.title()
+    if questions in serversName:
+        print(f"\nFound server {questions} in list")
+        break
+    else:
+        print(f"Server {questions} cannot be found, please try again")
+
+
     
-    for server, health in serversName:
-        
-        serversName == 'up'
-        
+    
+    
         
