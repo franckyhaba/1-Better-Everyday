@@ -17,7 +17,6 @@ serversName = {
     'art':  'up', 
     'Aws': 'Down',
     'Hubspot': 'Down',
-        
-    
-    
+    'Meta': 'up',
+    'MicroSoft': 'up:'
 }
