@@ -33,8 +33,8 @@ while True:
 
     health = input("\nPlease input the server name that you want to see the health check: ")
     
-    for servers, healthCheck in serversName: 
-        print("")
+    for servers, healthCheck in serversName.items(): 
+        print(f"The {servers} health check came back {healthCheck}")
         
     
 
