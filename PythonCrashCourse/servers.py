@@ -12,11 +12,11 @@
 
 
 serversName = {
-    'Art':  'up', 
+    'Art':  'Up', 
     'Aws': 'Down',
     'Hubspot': 'Down',
-    'Meta': 'up',
-    'Microsoft': 'up'  
+    'Meta': 'Up',
+    'Microsoft': 'Up'  
 }
 
 healthCheck = []
@@ -27,15 +27,23 @@ while True:
     if questions in serversName:
         print(f"\nFound server {questions} in list")
         continue 
-    else:  # <- 'elif questions not in serversName:' is redundant
+    else:  
         print(f"\n Server {questions} cannot be found, please try again")
 
 
-    health = input("\nPlease input the server name that you want to see the health check: ")
     
-    for servers, healthCheck in serversName.items(): 
-        print(f"The {servers} health check came back {healthCheck}")
-        
     
+    
+    def healthcheck():
+        servers = input("\nPlease input the server name that you want to see the health check: ")
+        if servers in serversName: 
+            print(f"\n {servers} has had a health check preformed on it")
+            continue
+        else: 
+            print(f"\n {servers} has not had a health check! ")
+            
+        for servers, status in serversName.items(): 
+            print(f"The {servers} health check came back {status}")
+    healthcheck()
 
 
