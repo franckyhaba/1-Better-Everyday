@@ -11,9 +11,13 @@ ServersStatus =  {
 
 info = input('Please enter what servers to check: ')
 
-def healthCheck():
-    
-    
+def healthCheck(verbose):
+
+    if verbose == True:
+        print ("detailed out")
+    else:
+        verbose == False
+        print("minimal output")
 
 
     healthCheck()
