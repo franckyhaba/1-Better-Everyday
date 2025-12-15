@@ -9,11 +9,11 @@ ServersStatus =  {
 
 }
 
+info = input('Please enter what servers to check: ')
 
 def healthCheck():
     
     
 
 
-    
-    
+    healthCheck()
