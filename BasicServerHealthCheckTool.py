@@ -1,4 +1,4 @@
-ServersStatus =  {
+serversStatus =  {
 
 "Web01" : "UP",
 "DBO1" :  "Down",
@@ -9,7 +9,13 @@ ServersStatus =  {
 
 }
 
-info = input('Please enter what servers to check: ')
+while True: 
+    info = input('Please enter what servers to check: ')
+    
+    if info in serversStatus:
+        print(f"\nThe server {info} has been located! ")
+    else:
+        print(f"\nThe server {info} cant be located try again. ")
 
 def healthCheck(verbose):
 
