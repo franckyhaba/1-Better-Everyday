@@ -1,6 +1,10 @@
-invoice =  "10.000"
+invoice =  "10000"
 
-intro = "This system is to pay for your invoice."
+intro = "\nThis system is to pay for your invoice."
 print(intro)
-payment = float(input("\n Enter the amount the amount you want to pay: "))
+payment = float(input("\nEnter the amount the amount you want to pay: "))
 print (payment)
+
+if payment == invoice:
+    print ("Your payment of {payment} has paid of the invoice")
+    
