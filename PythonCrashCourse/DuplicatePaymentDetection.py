@@ -1,30 +1,44 @@
-invoices = {
-    "BNP FP": 5000,
-    "LVMH FP": 2500,
-    "MC FP": 70000,
-    "RNO FP": 16000,
-    "BAOC FP":4000,
-    "BNP FP": 5000  
-}
+invoices = [
+    ("BNP FP", 5000),
+    ("LVMH FP", 2500),
+    ("MC FP", 70000),
+    ("RNO FP", 16000),
+    ("BAOC FP", 4000),
+    ("BNP FP", 5000)  # duplicate
+]
+
+def detect_duplicate_payments(invoices):
+    seen = {}
+    duplicates = {}
+
+    for ref, amount in invoices:
+        if ref in seen:
+            duplicates[ref] = duplicates.get(ref, amount) + amount
+        else:
+            seen[ref] = amount
+
+    return duplicates
 
 
 
-def detectDuplicatePayments(invoice, payments):
-    
-    if invoice:
-        return 
-    else:
-        print("Zero duplicates can be found")
-        
+while True:
+    intro = input(
+        "\nDo you want to check for duplicates in data? Enter 'Y' or 'N': "
+    ).upper()
 
-while True: 
-    intro = str(input("\nDo you want to check for Duplicates in Data if yes enter 'y' else 'N' to exit: ")).uppper
-    
-    if intro:
-        intro == "Y"
+    if intro == "Y":
         print("\nLooking for duplicates.....")
-    
-    elif intro:
-        intro == "N"
-        print("\n Exiting, have a good day!")
+
+        duplicate_invoices = detect_duplicate_payments(invoices)
+
+        if duplicate_invoices:
+            for ref, total in duplicate_invoices.items():
+                print(f"Duplicate detected: {ref} | Total Paid: £{total}")
+        else:
+            print("No duplicate payments found.")
+
+    elif intro == "N":
+        print("\nExiting, have a good day!")
         break
+    else:
+        print("Invalid input. Please enter Y or N.")
