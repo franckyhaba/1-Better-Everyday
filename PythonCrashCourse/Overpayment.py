@@ -5,9 +5,15 @@ def calculate_overpayment(invoice_amount, amount_paid):
         return 0
 
 
-# Test example
 invoice = 10000.0
-payment = float(input("\n Enter the amount paid: "))
+
+while True:
+    try:
+        payment = float(input("\nEnter the amount paid: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
 
 overpayment = calculate_overpayment(invoice, payment)
 
