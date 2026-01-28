@@ -11,12 +11,20 @@ invoices = {
 
 def detectDuplicatePayments(invoice, payments):
     
-    if invoice 
+    if invoice:
         return 
     else:
         print("Zero duplicates can be found")
         
 
 while True: 
-    Intro = str(input("Do you want to check for Duplicates in Data if yes enter 'y' else 'N' to exit: "))
+    intro = str(input("\nDo you want to check for Duplicates in Data if yes enter 'y' else 'N' to exit: ")).uppper
     
+    if intro:
+        intro == "Y"
+        print("\nLooking for duplicates.....")
+    
+    elif intro:
+        intro == "N"
+        print("\n Exiting, have a good day!")
+        break
