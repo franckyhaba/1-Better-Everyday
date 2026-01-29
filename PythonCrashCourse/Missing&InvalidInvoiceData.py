@@ -24,5 +24,14 @@ def dataQuality(invoices):
     
     while True:
         
-    
-            
+        intro = input(
+            "Enter do you want to check data quality? 'Y' to continue and 'N' to exit: "
+            ).upper()
+        
+        if intro == 'Y':
+            print("Checking data quality.....")
+            continue 
+        
+        if intro == 'N':
+            print("Exiting........")
+            break 
