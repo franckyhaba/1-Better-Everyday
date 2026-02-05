@@ -1,54 +1,38 @@
-invoices = [
-    ("FP001", "BNP", 5000, "PAID"),
-    ("FP002", "LVMH", -2500, "PAID"),
-    ("FP003", "", 7000, "UNPAID"),
-    ("FP004", "RNO", 0, "PAID"),
-    ("FP005", "BAOC", 4000, "CLOSED")
+payments = [
+    ("BNP", 5000),
+    ("LVMH", 2500),
+    ("BNP", 7000),
+    ("RNO", 16000),
+    ("BNP", 3000),
+    ("BAOC", 4000)
 ]
 
-def data_quality(invoices):
-    invalid = {}
-
-    for ref, name, amount, status in invoices:
-        issues = []
-
-        if name == "":
-            issues.append("Missing supplier name")
-
-        if amount <= 0:
-            issues.append("Invalid amount")
-
-        if status not in ("PAID", "UNPAID"):
-            issues.append("Invalid status")
-
-        if issues:
-            invalid[ref] = issues
-
-    return invalid
+FLAGGED_PAYMENT_AMOUNT = 10000
 
 
-    
-    
-while True:
-    intro = input(
-        "\nDo you want to check data quality? Enter 'Y' or 'N': "
-    ).upper()
+def risk_check(payments, flagged_payment_amount):
+    total_spend = {}
+    flagged_suppliers = {}
 
-    if intro == 'Y':
-        print("\nChecking data quality.....")
-
-        invalid_invoices = data_quality(invoices)
-
-        if invalid_invoices:
-            for ref, issues in invalid_invoices.items():
-                print(f"\nInvoice {ref}:")
-                for issue in issues:
-                    print(f" - {issue}")
+    for supplier, amount in payments:
+        if supplier in total_spend:
+            total_spend[supplier] += amount
         else:
-            print("\nNo data quality issues found.")
+            total_spend[supplier] = amount
 
-    elif intro == 'N':
-        print("\nExiting, have a good day!")
-        break
-    else:
-        print("\nInvalid input. Please enter Y or N.")
+    for supplier, total in total_spend.items():
+        if total > flagged_payment_amount:
+            flagged_suppliers[supplier] = total
+
+    return flagged_suppliers
+
+
+flagged = risk_check(payments, FLAGGED_PAYMENT_AMOUNT)
+
+if flagged:
+    print("Flagged suppliers (exceed risk threshold):")
+    for supplier, total in flagged.items():
+        print(f"{supplier}: £{total}")
+else:
+    print("No suppliers exceed the risk threshold.")
+
