@@ -36,3 +36,8 @@ if flagged:
 else:
     print("No suppliers exceed the risk threshold.")
 
+# This script reviews supplier payment data to identify suppliers with high total spend. 
+# It groups payments by supplier, calculates the total amount paid, 
+# and flags any supplier whose total exceeds £10,000. 
+# This type of check is commonly used in audits and risk analysis to 
+# highlight suppliers that may require further review.

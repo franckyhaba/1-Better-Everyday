@@ -13,4 +13,23 @@ def exccedSpend (name, amount):
     overSpend = {}
     totalSpend = {}
     for name, amount in expenses:
-        if 
+        if name in totalSpend:
+            totalSpend[name] += amount
+        else:
+            totalSpend[name] = amount
+    
+            
+
+    for name, total in totalSpend.items():
+        if total > maxSpend:
+            overSpend[name] = total
+    return overSpend
+
+runFun = exccedSpend (expenses, maxSpend)
+
+if runFun:
+    print("Flagged departments (exceed budget threshold):")
+    for name, amount in runFun.items():
+        print(f"{name}: £{amount}")
+else:
+    print("No suppliers exceed the risk threshold.")
