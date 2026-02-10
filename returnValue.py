@@ -1,7 +1,7 @@
-def getFullName(fName, sName):
+def getFullName(fName,mName ,sName):
     
-    fullName = f"\n {fName} {sName}"
+    fullName = f"\n {fName} {mName}{sName}"
     return fullName.title()
 
-footy = getFullName('jimi','Mac')
+footy = getFullName('jimi','jon','Mac')
 print(footy)
